@@ -7,7 +7,7 @@ library Math {
     /// @param x The first 256 bit integer
     /// @param y The second 256 bit integer
     /// @return result The minimum of the two 256 bit integers
-    function min(uint256 x, uint256 y) pure returns (uint256 result) {
+    function min(uint256 x, uint256 y) internal pure returns (uint256 result) {
         result = x < y ? x : y;
     }
 }
