@@ -31,7 +31,7 @@ library Math {
         uint256 prod0; // Least significant 256 bits of the product
         uint256 prod1; // Most significant 256 bits of the product
         assembly {
-            let mm := mulmod(a, b, MAX_UINT256)
+            let mm := mulmod(a, b, not(0))
             prod0 := mul(a, b)
             prod1 := sub(sub(mm, prod0), lt(mm, prod0))
         }
