@@ -71,7 +71,7 @@ library Math {
         // Factor powers of two out of denominator
         // Compute largest power of two divisor of denominator.
         // Always >= 1 unless denominator is zero, then twos is zero.
-        uint256 twos = MAX_UINT256 - (denominator - 1) & denominator;
+        uint256 twos = type(uint256).max - (denominator - 1) & denominator;
         // Divide denominator by power of two
         assembly {
             denominator := div(denominator, twos)
