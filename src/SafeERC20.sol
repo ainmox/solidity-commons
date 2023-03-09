@@ -25,7 +25,8 @@ library SafeERC20 {
     function safeTransfer(IERC20 token, address recipient, uint256 amount) internal {
         bool success;
 
-        assembly ("memory-safe") {
+        /// @solidity memory-safe-assembly
+        assembly {
             // Check that the token is a contract. This is a strict check and this implementation can do without it
             // if the caller trusts that the token exists.
             if iszero(extcodesize(token)) {
@@ -88,7 +89,8 @@ library SafeERC20 {
     function safeTransferFrom(IERC20 token, address owner, address recipient, uint256 amount) internal {
         bool success;
 
-        assembly ("memory-safe") {
+        /// @solidity memory-safe-assembly
+        assembly {
             // Check that the token is a contract. This is a strict check and this implementation can do without it
             // if the caller trusts that the token exists.
             if iszero(extcodesize(token)) {
