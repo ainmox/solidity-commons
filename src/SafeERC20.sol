@@ -69,7 +69,7 @@ library SafeERC20 {
                     ERC20_TRANSFER_SIGNATURE_POINTER, /* argsOffset */
                     ERC20_TRANSFER_MESSAGE_LENGTH,    /* argsLength */
                     0x00,                             /* retOffset */
-                    0x32                              /* retLength */
+                    0x20                              /* retLength */
                 )
             )
 
@@ -133,7 +133,7 @@ library SafeERC20 {
                     ERC20_TRANSFER_FROM_SIGNATURE_POINTER, /* argsOffset */
                     ERC20_TRANSFER_FROM_MESSAGE_LENGTH,    /* argsLength */
                     0x00,                                  /* retOffset */
-                    0x32                                   /* retLength */
+                    0x20                                   /* retLength */
                 )
             )
 
